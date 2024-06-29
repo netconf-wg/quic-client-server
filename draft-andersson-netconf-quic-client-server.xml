@@ -69,7 +69,56 @@
       <t>This section defines a YANG 1.1 module called "ietf-quic-client".</t>
 
       <section anchor="client-overview" title="Data model overview">
-          <t>TBD</t>
+        <t>This section presents an overview of of the "ietf-quic-client"
+          module in terms of features and groupings.</t>
+
+        <section title="Features">
+          <t>The module itself does not define any features. However, in
+            order to require TLS 1.3 the following "if-feature" is defined
+            "tlscmn:tls13 not tlscmn:tls12". For QUIC TLS requirements see
+            <xref target="RFC9001"/>.</t>
+
+          <t>For further details about available features see the
+            "ietf-tls-client" and "ietf-udp-client" modules. defined in
+            <xref target="I-D.ietf-netconf-tls-client-server"/> and
+            <xref target="I-D.ietf-netconf-udp-client-server"/>
+            respectively.</t>
+        </section>
+
+        <section title="Groupings">
+          <t>The "ietf-quic-client" module defines the following "grouping"
+            statement:</t>
+
+          <ul>
+            <li>quic-client-grouping</li>
+          </ul>
+
+          <t>This grouping is presented in the following subsection.</t>
+
+          <section title='The "quic-client-grouping" Grouping' toc="exclude">
+            <t>The following tree diagram <xref target="RFC8340"/> illustrates
+                the "quic-client-grouping" grouping:</t>
+            <t>
+              <figure>
+               <artwork><![CDATA[
+INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-client.txt)
+]]></artwork>
+              </figure>
+            </t>
+            <t>Comments:</t>
+            <ul>
+              <li>This grouping uses the "tls-client-grouping" grouping
+                discussed in
+                <xref target="I-D.ietf-netconf-tls-client-server"/>. Note
+                that QUIC requires TLS&nbsp;1.3 (or later), thus the
+                "if-feature" invariant "tlscmn:tls13 and not tlscmn:tls12" is
+                defined for this grouping.</li>
+              <li>This grouping uses the "udp-client-grouping" grouping
+                discussed in
+                <xref target="I-D.ietf-netconf-udp-client-server"/>.</li>
+            </ul>
+          </section>
+        </section>
       </section>
 
       <section anchor="client-yang-module" title="YANG Module">
@@ -91,7 +140,56 @@
       <t>This section defines a YANG 1.1 module called "ietf-quic-server".</t>
 
       <section anchor="server-overview" title="Data model overview">
-          <t>TBD</t>
+        <t>This section presents an overview of of the "ietf-quic-server"
+          module in terms of features and groupings.</t>
+
+        <section title="Features">
+          <t>The module itself does not define any features. However, in
+            order to require TLS 1.3 the following "if-feature" is defined
+            "tlscmn:tls13 not tlscmn:tls12". For QUIC TLS requirements see
+            <xref target="RFC9001"/>.</t>
+
+          <t>For further details about available features see the
+            "ietf-tls-server" and "ietf-udp-server" modules, defined in
+            <xref target="I-D.ietf-netconf-tls-client-server"/> and
+            <xref target="I-D.ietf-netconf-udp-client-server"/>
+            respectively.</t>
+        </section>
+
+        <section title="Groupings">
+          <t>The "ietf-quic-server" module defines the following "grouping"
+            statement:</t>
+
+          <ul>
+            <li>quic-server-grouping</li>
+          </ul>
+
+          <t>This grouping is presented in the following subsection.</t>
+
+          <section title='The "quic-server-grouping" Grouping' toc="exclude">
+            <t>The following tree diagram <xref target="RFC8340"/> illustrates
+                the "quic-server-grouping" grouping:</t>
+            <t>
+              <figure>
+               <artwork><![CDATA[
+INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-server.txt)
+]]></artwork>
+              </figure>
+            </t>
+            <t>Comments:</t>
+            <ul>
+              <li>This grouping uses the "tls-server-grouping" grouping
+                discussed in
+                <xref target="I-D.ietf-netconf-tls-client-server"/>. Note
+                that QUIC requires TLS&nbsp;1.3 (or later), thus the
+                "if-feature" invariant "tlscmn:tls13 and not tlscmn:tls12" is
+                defined for this grouping.</li>
+              <li>This grouping uses the "udp-server-grouping" grouping
+                discussed in
+                <xref target="I-D.ietf-netconf-udp-client-server"/>.</li>
+            </ul>
+          </section>
+        </section>
       </section>
 
       <section anchor="server-yang-module" title="YANG Module">
@@ -174,11 +272,13 @@ RFC: AAAA
       <?rfc include="reference.RFC.8341.xml"?> <!-- NACM -->
       <?rfc include="reference.RFC.8446.xml"?> <!-- TLS 1.3 -->
       <?rfc include="reference.RFC.9000.xml"?> <!-- QUIC -->
+      <?rfc include="reference.RFC.9001.xml"?> <!-- QUIC TLS -->
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-tls-client-server.xml"/>
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-udp-client-server.xml"/>
     </references>
     <references title="Informative References">
       <?rfc include="reference.RFC.6020.xml"?> <!-- YANG (orig) -->
+      <?rfc include="reference.RFC.8340.xml"?> <!-- tree diagrams-->
     </references>
   </back>
 </rfc>
