@@ -64,10 +64,6 @@
         conjunction with configuration of other protocol layers.</t>
     </section>
 
-    <section anchor="security" title="Security Considerations">
-      <t>TBD</t>
-    </section>
-
     <section anchor="quic-client-model" title='The "ietf-quic-client" Module'>
 
       <t>This section defines a YANG 1.1 module called "ietf-quic-client".</t>
@@ -110,6 +106,10 @@
           <postamble>&lt;CODE ENDS&gt;</postamble>
         </figure>
       </section>
+    </section>
+
+    <section anchor="security" title="Security Considerations">
+      <t>TBD</t>
     </section>
 
     <section title="IANA Considerations">
