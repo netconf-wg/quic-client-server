@@ -22,8 +22,8 @@
      ipr="trust200902">
 
   <front>
-    <title abbrev="Groupings for QUIC clients and QUIC  servers">
-        YANG Groupings for QUIC clients and QUIC servers
+    <title abbrev="Groupings for QUIC clients and servers">
+      YANG Groupings for QUIC clients and QUIC servers
     </title>
 
     <author fullname="Per Andersson" initials="P." surname="Andersson">
