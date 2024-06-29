@@ -58,8 +58,10 @@
   </front>
   <middle>
     <section anchor="intro" title="Introduction">
-      <t>TBD
-      </t>
+      <t>This documents defines two YANG 1.1 <xref target="RFC7950"/> modules
+        to support the configuration of QUIC clients and QUIC servers (QUIC is
+        defined in <xref target="RFC9000"/>), either as standalone or in
+        conjunction with configuration of other protocol layers.</t>
     </section>
 
     <section anchor="security" title="Security Considerations">
