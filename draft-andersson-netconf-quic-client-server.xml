@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
+<?rfc toc="yes"?>
+<?rfc symrefs="yes"?>
+<?rfc sortrefs="yes" ?>
+<?rfc compact="yes"?>
+<?rfc subcompact="no"?>
+<?rfc linkmailto="no" ?>
+<?rfc editing="no" ?>
+<?rfc comments="yes" ?>
+<?rfc inline="yes"?>
+<?rfc rfcedstyle="yes"?>
+<?rfc-ext allow-markup-in-artwork="yes" ?>
+<?rfc-ext include-index="no" ?>
+<!--<?rfc strict="no"?> -->
+
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude"
+     docName="draft-andersson-netconf-quic-client-server-latest"
+     category="std"
+     consensus="true"
+     updates="6243"
+     ipr="trust200902">
+
+  <front>
+    <title abbrev="Groupings for QUIC clients and QUIC  servers">
+        YANG Groupings for QUIC clients and QUIC servers
+    </title>
+
+    <author fullname="Per Andersson" initials="P." surname="Andersson">
+      <organization>Cisco Systems</organization>
+      <address>
+        <email>per.ietf@ionio.se</email>
+      </address>
+    </author>
+
+    <date/>
+    <area>OPS Area</area>
+    <workgroup>NETCONF Working Group</workgroup>
+
+    <abstract>
+      <t>TBD</t>
+    </abstract>
+
+    <note title="Editorial note (To be removed by the RFC Editor)">
+      <t>This draft contains placeholder values that need to be replaced
+        with finalized values at the time of publication. This note summarizes
+        all of the substitutions that are needed. No other RFC Editor
+        instructions are specified elsewhere in this document.</t>
+      <t>Artwork in this document contains shorthand references to drafts in
+        progress.  Please apply the following replacements:
+      <list style="symbols">
+          <t><spanx style="verb">AAAA</spanx> --&gt; the assigned RFC value for this draft</t>
+          <t><spanx style="verb">BBBB</spanx> --&gt; the assigned RFC value for draft-ietf-netconf-tls-client-server</t>
+          <t><spanx style="verb">CCCC</spanx> --&gt; the assigned RFC value for draft-ietf-netconf-udp-client-server</t>
+        </list>
+      </t>
+    </note>
+  </front>
+  <middle>
+    <section anchor="intro" title="Introduction">
+      <t>TBD
+      </t>
+    </section>
+
+    <section anchor="security" title="Security Considerations">
+      <t>TBD</t>
+    </section>
+
+    <section anchor="quic-client-model" title='The "ietf-quic-client" Module'>
+
+      <t>This section defines a YANG 1.1 module called "ietf-quic-client".</t>
+
+      <section anchor="client-overview" title="Data model overview">
+          <t>TBD</t>
+      </section>
+
+      <section anchor="client-yang-module" title="YANG Module">
+        <t>This YANG module has normative references to
+          <xref target="I-D.ietf-netconf-tls-client-server"/> and
+          <xref target="I-D.ietf-netconf-udp-client-server"/>.</t>
+        <figure>
+          <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-client@YYYY-MM-DD.yang"</preamble>
+          <artwork><![CDATA[
+  INSERT_TEXT_FROM_FILE(ietf-quic-client@YYYY-MM-DD.yang)
+  ]]></artwork>
+          <postamble>&lt;CODE ENDS&gt;</postamble>
+        </figure>
+      </section>
+    </section>
+
+    <section anchor="quic-server-model" title='The "ietf-quic-server" Module'>
+
+      <t>This section defines a YANG 1.1 module called "ietf-quic-server".</t>
+
+      <section anchor="server-overview" title="Data model overview">
+          <t>TBD</t>
+      </section>
+
+      <section anchor="server-yang-module" title="YANG Module">
+        <t>This YANG module has normative references to
+          <xref target="I-D.ietf-netconf-tls-client-server"/> and
+          <xref target="I-D.ietf-netconf-udp-client-server"/>.</t>
+        <figure>
+          <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-server@YYYY-MM-DD.yang"</preamble>
+          <artwork><![CDATA[
+  INSERT_TEXT_FROM_FILE(ietf-quic-server@YYYY-MM-DD.yang)
+  ]]></artwork>
+          <postamble>&lt;CODE ENDS&gt;</postamble>
+        </figure>
+      </section>
+    </section>
+
+    <section title="IANA Considerations">
+
+      <section title='The "IETF XML" Registry'>
+        <t>This document registers one URI in the "ns" subregistry of
+            the IETF XML Registry <xref target="RFC3688"/> maintained at
+            <eref target="https://www.iana.org/assignments/xml-registry/xml-registry.xhtml#ns"/>.
+            Following the format in <xref target="RFC3688"/>, the following
+            registration is requested:</t>
+        <t>
+          <figure align="center">
+            <artwork>
+URI: urn:ietf:params:xml:ns:yang:ietf-quic-client
+Registrant Contact: The IESG.
+XML: N/A, the requested URI is an XML namespace.
+
+URI: urn:ietf:params:xml:ns:yang:ietf-quic-server
+Registrant Contact: The IESG.
+XML: N/A, the requested URI is an XML namespace.
+            </artwork>
+          </figure>
+        </t>
+      </section>
+
+      <section title='The "YANG Module Names" Registry'>
+        <t>This document registers one YANG module in the YANG
+          Module Names registry <xref target="RFC6020"/> maintained at
+          <eref target="https://www.iana.org/assignments/yang-parameters/yang-parameters.xhtml"/>.
+          Following the format defined in <xref target="RFC6020"/>,
+          the below registration is requested:</t>
+        <t>
+          <figure align="center">
+            <artwork>
+name: ietf-quic-client
+namespace: urn:ietf:params:xml:ns:yang:ietf-quic-client
+prefix: quicc
+RFC: AAAA
+
+name: ietf-quic-server
+namespace: urn:ietf:params:xml:ns:yang:ietf-quic-server
+prefix: quics
+RFC: AAAA
+            </artwork>
+          </figure>
+        </t>
+      </section>
+    </section>
+  </middle>
+  <back>
+    <references title="Normative References">
+      <?rfc include="reference.RFC.2119.xml"?> <!-- MUSTs, etc. -->
+      <?rfc include="reference.RFC.3688.xml"?> <!-- IETF XML Registry -->
+      <?rfc include="reference.RFC.6241.xml"?> <!-- NETCONF -->
+      <?rfc include="reference.RFC.6242.xml"?> <!-- NETCONF over SSH -->
+      <?rfc include="reference.RFC.6243.xml"?> <!-- NETCONF with-defaults -->
+      <?rfc include="reference.RFC.7950.xml"?> <!-- YANG (curr) -->
+      <?rfc include="reference.RFC.7951.xml"?> <!-- YANG JSON -->
+      <?rfc include="reference.RFC.7952.xml"?> <!-- YANG Metadata -->
+      <?rfc include="reference.RFC.8040.xml"?> <!-- RESTCONF -->
+      <?rfc include="reference.RFC.8174.xml"?> <!-- rfc2119 update -->
+      <?rfc include="reference.RFC.8341.xml"?> <!-- NACM -->
+      <?rfc include="reference.RFC.8446.xml"?> <!-- TLS 1.3 -->
+      <?rfc include="reference.RFC.9000.xml"?> <!-- QUIC -->
+      <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-tls-client-server.xml"/>
+      <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-udp-client-server.xml"/>
+    </references>
+    <references title="Informative References">
+      <?rfc include="reference.RFC.6020.xml"?> <!-- YANG (orig) -->
+    </references>
+  </back>
+</rfc>
