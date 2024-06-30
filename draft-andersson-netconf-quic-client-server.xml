@@ -38,7 +38,9 @@
     <workgroup>NETCONF Working Group</workgroup>
 
     <abstract>
-      <t>TBD</t>
+      <t>This document defines two YANG 1.1 modules to support the
+        configuration of QUIC clients and QUIC servers. The modules include
+        basic parameters for configuring QUIC based clients and servers.</t>
     </abstract>
 
     <note title="Editorial note (To be removed by the RFC Editor)">
