@@ -237,7 +237,7 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-server.txt)
     <section title="IANA Considerations">
 
       <section title='The "IETF XML" Registry'>
-        <t>This document registers one URI in the "ns" subregistry of
+        <t>This document registers two URIs in the "ns" subregistry of
             the IETF XML Registry <xref target="RFC3688"/> maintained at
             <eref target="https://www.iana.org/assignments/xml-registry/xml-registry.xhtml#ns"/>.
             Following the format in <xref target="RFC3688"/>, the following
@@ -258,7 +258,7 @@ XML: N/A, the requested URI is an XML namespace.
       </section>
 
       <section title='The "YANG Module Names" Registry'>
-        <t>This document registers one YANG module in the YANG
+        <t>This document registers two YANG modules in the YANG
           Module Names registry <xref target="RFC6020"/> maintained at
           <eref target="https://www.iana.org/assignments/yang-parameters/yang-parameters.xhtml"/>.
           Following the format defined in <xref target="RFC6020"/>,
