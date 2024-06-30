@@ -207,7 +207,31 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-server.txt)
     </section>
 
     <section anchor="security" title="Security Considerations">
-      <t>TBD</t>
+      <t>This section follows the template defined in Section 3.7.1 of
+        <xref target="RFC8407"/>.</t>
+      <t>The YANG modules specified in this document defines a schema for data
+        that is designed to be accessed via network management protocols such
+        as NETCONF <xref target="RFC6241"/> or RESTCONF
+        <xref target="RFC8040"/>. The lowest NETCONF layer is the secure
+        transport layer, and the mandatory-to-implement secure transport is
+        Secure Shell (SSH) <xref target="RFC6242"/>. The lowest RESTCONF layer
+        is HTTPS, and the mandatory-to-implement secure transport is TLS
+        <xref target="RFC8446"/>.</t>
+      <t>The Network Configuration Access Control Model (NACM)
+        <xref target="RFC8341"/> provides the means to restrict access for
+        particular NETCONF or RESTCONF users to a preconfigured subset of all
+        available NETCONF or RESTCONF protocol operations and content.</t>
+      <t>The modules presented in this draft does not contain any protocol
+        accessible nodes, and thus the security considerations for such are
+        not provided here.</t>
+      <t>Furthermore, the modules defines groupings, these considerations are
+        primarily for the designers of other modules that use these groupings.</t>
+      <t>Security considerations for the groupings used in the modules are
+        discussed in <xref target="I-D.ietf-netconf-tls-client-server"/> and
+        <xref target="I-D.ietf-netconf-udp-client-server"/>, refer to these
+        documents for further details.</t>
+      <t>Since the modules does not define any RPCs or actions or notifications,
+        and thus the security considerations for such are not provided here.</t>
     </section>
 
     <section title="IANA Considerations">
@@ -270,6 +294,7 @@ RFC: AAAA
       <?rfc include="reference.RFC.8040.xml"?> <!-- RESTCONF -->
       <?rfc include="reference.RFC.8174.xml"?> <!-- rfc2119 update -->
       <?rfc include="reference.RFC.8341.xml"?> <!-- NACM -->
+      <?rfc include="reference.RFC.8407.xml"?> <!-- YANG guidelines -->
       <?rfc include="reference.RFC.8446.xml"?> <!-- TLS 1.3 -->
       <?rfc include="reference.RFC.9000.xml"?> <!-- QUIC -->
       <?rfc include="reference.RFC.9001.xml"?> <!-- QUIC TLS -->
