@@ -71,7 +71,7 @@ $(next).xml: $(draft).xml
 
 %.txt: %.xml 
 	$(xml2rfc) --v3 $< -o $@ --text
-	@if [[ "$next_ver" -ne "00" ]]; then idnits $@; fi
+	@if [ "$(next_ver)" -ne "00" ]; then idnits $@; fi
 
 %.html: %.xml
 	$(xml2rfc) --v3 $< -o $@ --html
