@@ -7,13 +7,13 @@ module ietf-quic-client {
   import ietf-tls-client {
     prefix tlsc;
     reference
-      "RFC BBBB: YANG Groupings for TLS Clients and TLS Servers";
+      "RFC 9645: YANG Groupings for TLS Clients and TLS Servers";
   }
 
   import ietf-tls-common {
     prefix tlscmn;
     reference
-      "RFC BBBB: YANG Groupings for TLS Clients and TLS Servers";
+      "RFC 9645: YANG Groupings for TLS Clients and TLS Servers";
   }
 
   import ietf-udp-client {

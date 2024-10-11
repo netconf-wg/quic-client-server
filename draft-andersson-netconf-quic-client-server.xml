@@ -52,7 +52,6 @@
         progress.  Please apply the following replacements:
       <list style="symbols">
           <t><spanx style="verb">AAAA</spanx> --&gt; the assigned RFC value for this draft</t>
-          <t><spanx style="verb">BBBB</spanx> --&gt; the assigned RFC value for draft-ietf-netconf-tls-client-server</t>
           <t><spanx style="verb">CCCC</spanx> --&gt; the assigned RFC value for draft-ietf-netconf-udp-client-server</t>
         </list>
       </t>
@@ -82,7 +81,7 @@
 
           <t>For further details about available features see the
             "ietf-tls-client" and "ietf-udp-client" modules. defined in
-            <xref target="I-D.ietf-netconf-tls-client-server"/> and
+            <xref target="RFC9645"/> and
             <xref target="I-D.ietf-netconf-udp-client-server"/>
             respectively.</t>
         </section>
@@ -153,7 +152,7 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-client.txt)
 
           <t>For further details about available features see the
             "ietf-tls-server" and "ietf-udp-server" modules, defined in
-            <xref target="I-D.ietf-netconf-tls-client-server"/> and
+            <xref target="RFC9645"/> and
             <xref target="I-D.ietf-netconf-udp-client-server"/>
             respectively.</t>
         </section>
@@ -300,7 +299,7 @@ RFC: AAAA
       <?rfc include="reference.RFC.8446.xml"?> <!-- TLS 1.3 -->
       <?rfc include="reference.RFC.9000.xml"?> <!-- QUIC -->
       <?rfc include="reference.RFC.9001.xml"?> <!-- QUIC TLS -->
-      <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-tls-client-server.xml"/>
+      <?rfc include="reference.RFC.9645.xml"?> <!-- tls-client-server -->
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-udp-client-server.xml"/>
     </references>
     <references title="Informative References">
