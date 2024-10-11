@@ -53,6 +53,7 @@
       <list style="symbols">
           <t><spanx style="verb">AAAA</spanx> --&gt; the assigned RFC value for this draft</t>
           <t><spanx style="verb">CCCC</spanx> --&gt; the assigned RFC value for draft-ietf-netconf-udp-client-server</t>
+          <t><spanx style="verb">HHHH</spanx> --&gt; the assigned RFC value for draft-ietf-netconf-netconf-client-server</t>
         </list>
       </t>
     </note>
@@ -301,6 +302,7 @@ RFC: AAAA
       <?rfc include="reference.RFC.9001.xml"?> <!-- QUIC TLS -->
       <?rfc include="reference.RFC.9645.xml"?> <!-- tls-client-server -->
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-udp-client-server.xml"/>
+      <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-netconf-client-server.xml"/>
     </references>
     <references title="Informative References">
       <?rfc include="reference.RFC.6020.xml"?> <!-- YANG (orig) -->

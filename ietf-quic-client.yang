@@ -4,6 +4,12 @@ module ietf-quic-client {
     "urn:ietf:params:xml:ns:yang:ietf-quic-client";
   prefix quicc;
 
+  import ietf-netconf-client {
+    prefix ncc;
+    reference
+      "RFC HHHH: NETCONF Client and Server Models";
+  }
+
   import ietf-tls-client {
     prefix tlsc;
     reference
@@ -62,6 +68,30 @@ module ietf-quic-client {
       "RFC AAAA: YANG Groupings for QUIC Clients and QUIC Servers";
   }
 
+  // Features
+
+  feature quic-initiate {
+    description
+      "The 'quic-initiate' feature indicates that the NETCONF client
+       supports initiating QUIC connections to NETCONF servers.";
+    reference
+      "RFC AAAA: YANG Groupings for QUIC Clients and QUIC Servers";
+  }
+
+  /*
+  FIXME
+  feature quic-listen {
+    description
+      "The 'quic-listen' feature indicates that the NETCONF client
+       supports opening a port to listen for incoming NETCONF
+       server call-home QUIC connections.";
+    reference
+      "RFC 8071: NETCONF Call Home and RESTCONF Call Home";
+    reference
+      "RFC AAAA: YANG Groupings for QUIC Clients and QUIC Servers";
+  }
+  */
+
   // Groupings
 
   grouping quic-client-grouping {
@@ -78,5 +108,20 @@ module ietf-quic-client {
         "RFC 9001: Using TLS to Secure QUIC";
     }
     uses udpc:udp-client-grouping;
+  }
+
+  // Augments
+
+  /* FIXME seems pyang don't support this augment */
+  augment "/ncc:netconf-client/ncc:initiate" {
+    if-feature "quic-initiate";
+  }
+
+  augment "/ncc:netconf-client/ncc:initiate/ncc:netconf-server" +
+          "/ncc:endpoints/ncc:endpoint/ncc:transport" {
+    case quic {
+      if-feature "quic-initiate";
+      container quic {
+        uses quicc:quicc-client-grouping;
   }
 }
