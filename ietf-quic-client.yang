@@ -115,13 +115,22 @@ module ietf-quic-client {
   /* FIXME seems pyang don't support this augment */
   augment "/ncc:netconf-client/ncc:initiate" {
     if-feature "quic-initiate";
+    description
+      "Add 'quic-initate' feature to the NETCONF client connection
+       configuration.";
   }
 
   augment "/ncc:netconf-client/ncc:initiate/ncc:netconf-server" +
           "/ncc:endpoints/ncc:endpoint/ncc:transport" {
+    description
+      "Add QUIC transport to the NETCONF client connection
+       configuration";
     case quic {
       if-feature "quic-initiate";
       container quic {
+        description
+          "QUIC-level client parameters to initiate a NETCONF over QUIC
+           connection.";
         uses quicc:quic-client;
       }
     }

@@ -78,7 +78,7 @@ module ietf-netconf-server {
      (RFC 8174) when, and only when, they appear in all
      capitals, as shown here.";
 
-  revision YYYY-MM-DD {
+  revision 2024-08-14 {
     description
       "Initial version";
     reference
@@ -535,7 +535,6 @@ module ietf-netconf-server {
                    client. If the connection goes down, immediately
                    start trying to reconnect to the NETCONF client,
                    using the reconnection strategy.
-
                    This connection type minimizes any NETCONF client
                    to NETCONF server data-transfer delay, albeit at
                    the expense of holding resources longer.";

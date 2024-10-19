@@ -103,13 +103,21 @@ module ietf-quic-server {
   /* FIXME seems pyang don't support this augment */
   augment "/ncs:netconf-server/ncs:listen" {
     if-feature "quic-listen";
+    description
+      "Add 'quic-listen' feature to the NETCONF server listen
+       configuration.";
   }
 
   augment "/ncs:netconf-server/ncs:listen/ncs:endpoints/ncs:endpoint" +
           "/ncs:transport" {
+    description
+      "Add QUIC transport to the NETCONF server listen configuration.";
     case quic {
       if-feature "quic-listen";
       container quic {
+        description
+          "QUIC-level server parameters to listen for NETCONF over QUIC
+           connections.";
         uses quics:quic-server;
       }
     }
