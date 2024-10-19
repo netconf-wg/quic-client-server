@@ -94,7 +94,7 @@ module ietf-quic-client {
 
   // Groupings
 
-  grouping quic-client-grouping {
+  grouping quic-client {
     description
       "Grouping to configure a QUIC client.";
     reference
@@ -122,7 +122,7 @@ module ietf-quic-client {
     case quic {
       if-feature "quic-initiate";
       container quic {
-        uses quicc:quic-client-grouping;
+        uses quicc:quic-client;
       }
     }
   }

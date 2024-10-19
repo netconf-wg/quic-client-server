@@ -82,7 +82,7 @@ module ietf-quic-server {
 
   // Groupings
 
-  grouping quic-server-grouping {
+  grouping quic-server {
     description
       "Grouping to configure a QUIC server.";
     reference
@@ -110,7 +110,7 @@ module ietf-quic-server {
     case quic {
       if-feature "quic-listen";
       container quic {
-        uses quics:quic-server-grouping;
+        uses quics:quic-server;
       }
     }
   }
