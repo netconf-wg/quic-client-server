@@ -115,14 +115,14 @@
             statement:</t>
 
           <ul>
-            <li>quic-client-grouping</li>
+            <li>quic-client</li>
           </ul>
 
           <t>This grouping is presented in the following subsection.</t>
 
-          <section title='The "quic-client-grouping" Grouping' toc="exclude">
+          <section title='The "quic-client" Grouping' toc="exclude">
             <t>The following tree diagram <xref target="RFC8340"/> illustrates
-                the "quic-client-grouping" grouping:</t>
+                the "quic-client" grouping:</t>
             <t>
               <figure>
                <artwork><![CDATA[
@@ -186,14 +186,14 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-client.txt)
             statement:</t>
 
           <ul>
-            <li>quic-server-grouping</li>
+            <li>quic-server</li>
           </ul>
 
           <t>This grouping is presented in the following subsection.</t>
 
-          <section title='The "quic-server-grouping" Grouping' toc="exclude">
+          <section title='The "quic-server" Grouping' toc="exclude">
             <t>The following tree diagram <xref target="RFC8340"/> illustrates
-                the "quic-server-grouping" grouping:</t>
+                the "quic-server" grouping:</t>
             <t>
               <figure>
                <artwork><![CDATA[
