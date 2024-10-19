@@ -122,6 +122,8 @@ module ietf-quic-client {
     case quic {
       if-feature "quic-initiate";
       container quic {
-        uses quicc:quicc-client-grouping;
+        uses quicc:quic-client-grouping;
+      }
+    }
   }
 }
