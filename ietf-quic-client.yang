@@ -129,8 +129,8 @@ module ietf-quic-client {
       if-feature "quic-initiate";
       container quic {
         description
-          "QUIC-level client parameters to initiate a NETCONF over QUIC
-           connection.";
+          "QUIC-level client parameters to initiate a NETCONF over
+           QUIC connection.";
         uses quicc:quic-client;
       }
     }

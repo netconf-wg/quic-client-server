@@ -108,16 +108,17 @@ module ietf-quic-server {
        configuration.";
   }
 
-  augment "/ncs:netconf-server/ncs:listen/ncs:endpoints/ncs:endpoint" +
-          "/ncs:transport" {
+  augment "/ncs:netconf-server/ncs:listen/ncs:endpoints" +
+          "/ncs:endpoint/ncs:transport" {
     description
-      "Add QUIC transport to the NETCONF server listen configuration.";
+      "Add QUIC transport to the NETCONF server listen
+       configuration.";
     case quic {
       if-feature "quic-listen";
       container quic {
         description
-          "QUIC-level server parameters to listen for NETCONF over QUIC
-           connections.";
+          "QUIC-level server parameters to listen for NETCONF over
+           QUIC connections.";
         uses quics:quic-server;
       }
     }
