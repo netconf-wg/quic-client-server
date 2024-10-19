@@ -64,6 +64,29 @@
         to support the configuration of QUIC clients and QUIC servers (QUIC is
         defined in <xref target="RFC9000"/>), either as standalone or in
         conjunction with configuration of other protocol layers.</t>
+
+      <section title="Terminology">
+        <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
+          NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED",
+          "MAY", and "OPTIONAL" in this document are to be interpreted as
+          described in BCP 14 <xref target="RFC2119"/> <xref target="RFC8174"/>
+          when, and only when, they appear in all capitals, as shown here.</t>
+        <t>The following terms are defined in <xref target="RFC7950"/>
+          and are not redefined here:
+            client,
+            data model,
+            data tree,
+            feature,
+            extension,
+            module,
+            leaf,
+            leaf-list,
+            and server.
+        </t>
+        <!--
+        <t>The following terms are defined in this document as follows:</t>
+        -->
+      </section>
     </section>
 
     <section anchor="quic-client-model" title='The "ietf-quic-client" Module'>
@@ -111,7 +134,7 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-client.txt)
             <ul>
               <li>This grouping uses the "tls-client-grouping" grouping
                 discussed in
-                <xref target="I-D.ietf-netconf-tls-client-server"/>. Note
+                <xref target="RFC9645"/>. Note
                 that QUIC requires TLS&nbsp;1.3 (or later), thus the
                 "if-feature" invariant "tlscmn:tls13 and not tlscmn:tls12" is
                 defined for this grouping.</li>
@@ -125,7 +148,7 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-client.txt)
 
       <section anchor="client-yang-module" title="YANG Module">
         <t>This YANG module has normative references to
-          <xref target="I-D.ietf-netconf-tls-client-server"/> and
+          <xref target="RFC9645"/> and
           <xref target="I-D.ietf-netconf-udp-client-server"/>.</t>
         <figure>
           <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-client@YYYY-MM-DD.yang"</preamble>
@@ -182,7 +205,7 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-server.txt)
             <ul>
               <li>This grouping uses the "tls-server-grouping" grouping
                 discussed in
-                <xref target="I-D.ietf-netconf-tls-client-server"/>. Note
+                <xref target="RFC9645"/>. Note
                 that QUIC requires TLS&nbsp;1.3 (or later), thus the
                 "if-feature" invariant "tlscmn:tls13 and not tlscmn:tls12" is
                 defined for this grouping.</li>
@@ -196,7 +219,7 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-server.txt)
 
       <section anchor="server-yang-module" title="YANG Module">
         <t>This YANG module has normative references to
-          <xref target="I-D.ietf-netconf-tls-client-server"/> and
+          <xref target="RFC9645"/> and
           <xref target="I-D.ietf-netconf-udp-client-server"/>.</t>
         <figure>
           <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-server@YYYY-MM-DD.yang"</preamble>
@@ -229,7 +252,7 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-server.txt)
       <t>Furthermore, the modules defines groupings, these considerations are
         primarily for the designers of other modules that use these groupings.</t>
       <t>Security considerations for the groupings used in the modules are
-        discussed in <xref target="I-D.ietf-netconf-tls-client-server"/> and
+        discussed in <xref target="RFC9645"/> and
         <xref target="I-D.ietf-netconf-udp-client-server"/>, refer to these
         documents for further details.</t>
       <t>Since the modules does not define any RPCs or actions or notifications,
@@ -289,10 +312,7 @@ RFC: AAAA
       <?rfc include="reference.RFC.3688.xml"?> <!-- IETF XML Registry -->
       <?rfc include="reference.RFC.6241.xml"?> <!-- NETCONF -->
       <?rfc include="reference.RFC.6242.xml"?> <!-- NETCONF over SSH -->
-      <?rfc include="reference.RFC.6243.xml"?> <!-- NETCONF with-defaults -->
       <?rfc include="reference.RFC.7950.xml"?> <!-- YANG (curr) -->
-      <?rfc include="reference.RFC.7951.xml"?> <!-- YANG JSON -->
-      <?rfc include="reference.RFC.7952.xml"?> <!-- YANG Metadata -->
       <?rfc include="reference.RFC.8040.xml"?> <!-- RESTCONF -->
       <?rfc include="reference.RFC.8174.xml"?> <!-- rfc2119 update -->
       <?rfc include="reference.RFC.8341.xml"?> <!-- NACM -->
