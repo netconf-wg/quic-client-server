@@ -10,6 +10,12 @@ module ietf-quic-server {
       "RFC HHHH: NETCONF Client and Server Models";
   }
 
+  import ietf-quic-common {
+    prefix quiccmn;
+    reference
+      "RFC AAAA: YANG Groupings for QUIC Clients and QUIC Servers";
+  }
+
   import ietf-tls-server {
     prefix tlss;
     reference
@@ -95,7 +101,8 @@ module ietf-quic-server {
       reference
         "RFC 9001: Using TLS to Secure QUIC";
     }
-    uses udps:udp-server-grouping;
+    uses udps:udp-server;
+    uses quiccmn:transport-parameters;
   }
 
   // Augments
