@@ -59,7 +59,7 @@ module ietf-quic-common{
       "RFC 9312: Manageability of the QUIC Transport Protocol";
 
     leaf version { type uint32; }
-    leaf initial_rtt { type uint32; }
+    leaf initial-rtt { type uint32; }
     leaf congestion-control-algorithm { type string; }
     leaf max-idle-timeout { type uint32; }
     leaf initial-max-streams-bidi { type uint32; }
