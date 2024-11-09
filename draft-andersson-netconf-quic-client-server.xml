@@ -18,7 +18,6 @@
      docName="draft-andersson-netconf-quic-client-server-latest"
      category="std"
      consensus="true"
-     updates="6243"
      ipr="trust200902">
 
   <front>
