@@ -37,7 +37,7 @@
     <workgroup>NETCONF Working Group</workgroup>
 
     <abstract>
-      <t>This document defines two YANG 1.1 modules to support the
+      <t>This document defines three YANG 1.1 modules to support the
         configuration of QUIC clients and QUIC servers. The modules include
         basic parameters for configuring QUIC based clients and servers.</t>
     </abstract>
@@ -85,6 +85,54 @@
         <!--
         <t>The following terms are defined in this document as follows:</t>
         -->
+      </section>
+    </section>
+
+    <section anchor="quic-common-model" title='The "ietf-quic-common" Module'>
+
+      <t>This section defines a YANG 1.1 module called "ietf-quic-common".</t>
+
+      <section anchor="common-overview" title="Data model overview">
+        <t>This section presents an overview of of the "ietf-quic-common"
+          module in terms of features and groupings.</t>
+
+        <section title="Groupings">
+          <t>The "ietf-quic-common" module defines the following "grouping"
+            statement:</t>
+
+          <ul>
+            <li>transport-parameters</li>
+          </ul>
+
+          <t>This grouping is presented in the following subsection.</t>
+
+          <section title='The "quic-common" Grouping' toc="exclude">
+            <t>The following tree diagram <xref target="RFC8340"/> illustrates
+                the "quic-common" grouping:</t>
+            <t>
+              <figure>
+                <artwork><![CDATA[
+INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-common-grouping.txt)
+]]></artwork>
+              </figure>
+            </t>
+            <t>Comments:</t>
+            <ul>
+              <li>This grouping contains common transport parameters for
+                  QUIC connections.</li>
+            </ul>
+          </section>
+        </section>
+      </section>
+
+      <section anchor="cmomon-yang-module" title="YANG Module">
+        <figure>
+          <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-common@YYYY-MM-DD.yang"</preamble>
+          <artwork><![CDATA[
+INSERT_TEXT_FROM_FILE(ietf-quic-common@YYYY-MM-DD.yang)
+]]></artwork>
+          <postamble>&lt;CODE ENDS&gt;</postamble>
+        </figure>
       </section>
     </section>
 
@@ -300,7 +348,7 @@ INSERT_TEXT_FROM_FILE(ietf-quic-server@YYYY-MM-DD.yang)
     <section title="IANA Considerations">
 
       <section title='The "IETF XML" Registry'>
-        <t>This document registers two URIs in the "ns" subregistry of
+        <t>This document registers three URIs in the "ns" subregistry of
             the IETF XML Registry <xref target="RFC3688"/> maintained at
             <eref target="https://www.iana.org/assignments/xml-registry/xml-registry.xhtml#ns"/>.
             Following the format in <xref target="RFC3688"/>, the following
@@ -308,6 +356,10 @@ INSERT_TEXT_FROM_FILE(ietf-quic-server@YYYY-MM-DD.yang)
         <t>
           <figure align="center">
             <artwork>
+URI: urn:ietf:params:xml:ns:yang:ietf-quic-common
+Registrant Contact: The IESG.
+XML: N/A, the requested URI is an XML namespace.
+
 URI: urn:ietf:params:xml:ns:yang:ietf-quic-client
 Registrant Contact: The IESG.
 XML: N/A, the requested URI is an XML namespace.
@@ -321,7 +373,7 @@ XML: N/A, the requested URI is an XML namespace.
       </section>
 
       <section title='The "YANG Module Names" Registry'>
-        <t>This document registers two YANG modules in the YANG
+        <t>This document registers three YANG modules in the YANG
           Module Names registry <xref target="RFC6020"/> maintained at
           <eref target="https://www.iana.org/assignments/yang-parameters/yang-parameters.xhtml"/>.
           Following the format defined in <xref target="RFC6020"/>,
@@ -329,6 +381,11 @@ XML: N/A, the requested URI is an XML namespace.
         <t>
           <figure align="center">
             <artwork>
+name: ietf-quic-common
+namespace: urn:ietf:params:xml:ns:yang:ietf-quic-common
+prefix: quiccmn
+RFC: AAAA
+
 name: ietf-quic-client
 namespace: urn:ietf:params:xml:ns:yang:ietf-quic-client
 prefix: quicc
@@ -358,6 +415,8 @@ RFC: AAAA
       <?rfc include="reference.RFC.8446.xml"?> <!-- TLS 1.3 -->
       <?rfc include="reference.RFC.9000.xml"?> <!-- QUIC -->
       <?rfc include="reference.RFC.9001.xml"?> <!-- QUIC TLS -->
+      <?rfc include="reference.RFC.9002.xml"?> <!-- QUIC loss/congestion-->
+      <?rfc include="reference.RFC.9312.xml"?> <!-- QUIC manageability -->
       <?rfc include="reference.RFC.9645.xml"?> <!-- tls-client-server -->
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-udp-client-server.xml"/>
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-netconf-client-server.xml"/>

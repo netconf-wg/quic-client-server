@@ -52,11 +52,9 @@ module ietf-quic-common{
     description
       "A reusable grouping for QUIC Transport Parameters.";
     reference
-      "RFC 9000: QUIC: A UDP-Based Multiplexed and Secure Transport";
-    reference
-      "RFC 9002: QUIC Loss Detection and Congestion Control";
-    reference
-      "RFC 9312: Manageability of the QUIC Transport Protocol";
+      "RFC 9000: QUIC: A UDP-Based Multiplexed and Secure Transport
+       RFC 9002: QUIC Loss Detection and Congestion Control
+       RFC 9312: Manageability of the QUIC Transport Protocol";
 
     leaf version { type uint32; }
     leaf initial-rtt { type uint32; }
