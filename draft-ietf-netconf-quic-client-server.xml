@@ -15,7 +15,7 @@
 <!--<?rfc strict="no"?> -->
 
 <rfc xmlns:xi="http://www.w3.org/2001/XInclude"
-     docName="draft-andersson-netconf-quic-client-server-latest"
+     docName="draft-ietf-netconf-quic-client-server-latest"
      category="std"
      consensus="true"
      ipr="trust200902">
