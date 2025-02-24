@@ -4,12 +4,6 @@ module ietf-quic-server {
     "urn:ietf:params:xml:ns:yang:ietf-quic-server";
   prefix quics;
 
-  import ietf-netconf-server {
-    prefix ncs;
-    reference
-      "RFC HHHH: NETCONF Client and Server Models";
-  }
-
   import ietf-quic-common {
     prefix quiccmn;
     reference
@@ -76,14 +70,6 @@ module ietf-quic-server {
 
   // Features
 
-  feature quic-listen {
-    description
-      "The 'quic-listen' feature indicates that the NETCONF server
-       supports the QUIC transport.";
-    reference
-      "I-D.draft-ietf-netconf-over-quic-00: NETCONF over QUIC";
-  }
-
   // FIXME feature quic-call-home
 
   // Groupings
@@ -103,31 +89,5 @@ module ietf-quic-server {
     }
     uses udps:udp-server;
     uses quiccmn:transport-parameters;
-  }
-
-  // Augments
-
-  /* FIXME seems pyang don't support this augment */
-  augment "/ncs:netconf-server/ncs:listen" {
-    if-feature "quic-listen";
-    description
-      "Add 'quic-listen' feature to the NETCONF server listen
-       configuration.";
-  }
-
-  augment "/ncs:netconf-server/ncs:listen/ncs:endpoints" +
-          "/ncs:endpoint/ncs:transport" {
-    description
-      "Add QUIC transport to the NETCONF server listen
-       configuration.";
-    case quic {
-      if-feature "quic-listen";
-      container quic {
-        description
-          "QUIC-level server parameters to listen for NETCONF over
-           QUIC connections.";
-        uses quics:quic-server;
-      }
-    }
   }
 }
