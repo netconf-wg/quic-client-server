@@ -191,26 +191,6 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-client-grouping.txt)
             </ul>
           </section>
         </section>
-
-        <section title='The "quic-client" Augments' toc="exclude">
-          <t>The "ietf-quic-client" module augments the
-            "/ncs:netconf-client/ncs:initiate" container
-            <xref target="I-D.ietf-netconf-netconf-client-server"/> with the
-            "if-feature" "quic-initiate".</t>
-          <t>This augment enables configuration of QUIC-level parameters
-            for NETCONF client connections.</t>
-          <!-- FIXME show a brief of the expanded ietf-netconf-server tree -->
-          <t>The following tree diagram <xref target="RFC8340"/> illustrates
-            the "quic-client" augmentation of "netconf-client":</t>
-          <t>
-            <figure>
-              <artwork><![CDATA[
-INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-client-augment.txt)
-]]></artwork>
-            </figure>
-          </t>
-        </section>
-
       </section>
 
       <section anchor="client-yang-module" title="YANG Module">
@@ -281,25 +261,6 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-server-grouping.txt)
                 <xref target="I-D.ietf-netconf-udp-client-server"/>.</li>
             </ul>
           </section>
-        </section>
-
-        <section title='The "quic-server" Augments' toc="exclude">
-          <t>The "ietf-quic-server" module augments the
-            "/ncs:netconf-server/ncs:listen" container
-            <xref target="I-D.ietf-netconf-netconf-client-server"/> with the
-              "if-feature" "quic-listen".</t>
-          <t>This augment enables configuration of QUIC-level parameters
-            for NETCONF server connections.</t>
-          <!-- FIXME show a brief of the expanded ietf-netconf-server tree -->
-          <t>The following tree diagram <xref target="RFC8340"/> illustrates
-            the "quic-server" augmentation of "netconf-server":</t>
-          <t>
-            <figure>
-              <artwork><![CDATA[
-INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-server-augment.txt)
-]]></artwork>
-            </figure>
-          </t>
         </section>
       </section>
 
