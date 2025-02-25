@@ -23,36 +23,28 @@ DATE=$(date +%Y-%m-%d)
 
 # Validation of the "quic-client" module
 
-# FIXME need iana modules
-#printf "SKIPPING Testing ietf-quic-client.yang (pyang)..."
-#printf "Testing ietf-quic-client.yang (pyang)..."
-#command="pyang -Werror --ietf --max-line-length=72 ../ietf-quic-client\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-#command="pyang --canonical ../ietf-quic-client\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-#printf "ok.\n"
+printf "Testing ietf-quic-client.yang (pyang)..."
+command="pyang -Werror --ietf --max-line-length=72 -p .. ../ietf-quic-client\@*.yang"
+run_unix_cmd $LINENO "$command" 0
+command="pyang --canonical ../ietf-quic-common\@*.yang ../ietf-quic-client\@*.yang"
+run_unix_cmd $LINENO "$command" 0
+printf "ok.\n"
 
-# FIXME fix if-feature
-#printf "SKIPPING Testing ietf-quic-client.yang (yanglint)..."
-#printf "Testing ietf-quic-client.yang (yanglint)..."
-#command="yanglint ietf-tls-client@2024-10-10.yang ietf-udp-client@2024-05-27.yang ../ietf-quic-client\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-#printf "ok.\n"
+printf "Testing ietf-quic-client.yang (yanglint)..."
+command="yanglint ietf-netconf-acm@2018-02-14.yang ietf-tls-common@2024-10-10.yang ietf-tls-client@2024-10-10.yang ietf-udp-client@2024-10-15.yang ../ietf-quic-client\@*.yang"
+run_unix_cmd $LINENO "$command" 0
+printf "ok.\n"
 
 # Validation of the "quic-server" module
 
-# FIXME need iana modules
-#printf "SKIPPING Testing ietf-quic-server.yang (pyang)..."
-#printf "Testing ietf-quic-server.yang (pyang)..."
-#command="pyang -Werror --ietf --max-line-length=72 ../ietf-quic-server\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-#command="pyang --canonical ../ietf-quic-server\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-#printf "ok.\n"
+printf "Testing ietf-quic-server.yang (pyang)..."
+command="pyang -Werror --ietf --max-line-length=72 -p .. ../ietf-quic-server\@*.yang"
+run_unix_cmd $LINENO "$command" 0
+command="pyang --canonical ../ietf-quic-common\@*.yang ../ietf-quic-server\@*.yang"
+run_unix_cmd $LINENO "$command" 0
+printf "ok.\n"
 
-# FIXME fix if-feature
-#printf "SKIPPING Testing ietf-quic-server.yang (yanglint)..."
-#printf "Testing ietf-quic-server.yang (yanglint)..."
-#command="yanglint ietf-tls-server@2024-10-10.yang ietf-udp-server@2024-05-27.yang ../ietf-quic-server\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-#printf "ok.\n"
+printf "Testing ietf-quic-server.yang (yanglint)..."
+command="yanglint ietf-tls-common@2024-10-10.yang ietf-tls-server@2024-10-10.yang ietf-udp-server@2024-10-15.yang ../ietf-quic-server\@*.yang"
+run_unix_cmd $LINENO "$command" 0
+printf "ok.\n"
