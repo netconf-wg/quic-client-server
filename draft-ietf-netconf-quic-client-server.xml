@@ -381,6 +381,10 @@ RFC: AAAA
       </section>
 
       <section title="Considerations for IANA Maintained Modules">
+        <t>
+          The initial YANG modules are created with the iana-yang tool from
+          &lt;https://github.com/llhotka/iana-yang&gt;.
+        </t>
         <section title='The "iana-quic-versions" Module'>
           <t>
             IANA is requested to maintain a YANG module called
@@ -473,6 +477,10 @@ RFC: AAAA
     </references>
 
     <section title="YANG Modules for IANA">
+      <t>
+        The initial YANG modules are created with the iana-yang tool from
+        &lt;https://github.com/llhotka/iana-yang&gt;.
+      </t>
       <section title='Initial Module for the "QUIC Versions" Registry'
                anchor="iana-quic-versions-module">
         <t>This YANG module has normative references to
