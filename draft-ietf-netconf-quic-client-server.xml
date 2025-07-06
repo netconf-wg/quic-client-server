@@ -93,6 +93,13 @@
 
       <t>This section defines a YANG 1.1 module called "ietf-quic-common".</t>
 
+      <t>
+        This YANG module has normative references to <xref target="RFC9000"/>,
+        <xref target="RFC9221"/>, <xref target="RFC9287"/>,
+        <xref target="RFC9312"/>, <xref target="RFC9368"/>, and
+        <xref target="RFC9369"/>.
+      </t>
+
       <section anchor="common-overview" title="Data model overview">
         <t>This section presents an overview of of the "ietf-quic-common"
           module in terms of features and groupings.</t>
@@ -126,7 +133,7 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-common-grouping.txt)
         </section>
       </section>
 
-      <section anchor="cmomon-yang-module" title="YANG Module">
+      <section anchor="common-yang-module" title="YANG Module">
         <figure>
           <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-common@YYYY-MM-DD.yang"</preamble>
           <artwork><![CDATA[
@@ -450,7 +457,6 @@ RFC: AAAA
       <?rfc include="reference.RFC.8446.xml"?> <!-- TLS 1.3 -->
       <?rfc include="reference.RFC.9000.xml"?> <!-- QUIC -->
       <?rfc include="reference.RFC.9001.xml"?> <!-- QUIC TLS -->
-      <?rfc include="reference.RFC.9002.xml"?> <!-- QUIC loss/congestion-->
       <?rfc include="reference.RFC.9312.xml"?> <!-- QUIC manageability -->
       <?rfc include="reference.RFC.9221.xml"?> <!-- QUIC unreliable datagram -->
       <?rfc include="reference.RFC.9287.xml"?> <!-- Greate Quic Bit -->
@@ -462,6 +468,7 @@ RFC: AAAA
     <references title="Informative References">
       <?rfc include="reference.RFC.6020.xml"?> <!-- YANG (orig) -->
       <?rfc include="reference.RFC.8340.xml"?> <!-- tree diagrams-->
+      <?rfc include="reference.RFC.9002.xml"?> <!-- QUIC loss/congestion-->
       <reference anchor="IANA-QUIC-VERSIONS" target="https://www.iana.org/assignments/quic/quic.xhtml#quic-versions">
         <front>
           <title>QUIC Versions</title>
@@ -500,7 +507,8 @@ INSERT_TEXT_FROM_FILE(iana-quic-versions@2024-03-21.yang)
         <t>
           This YANG module has normative references to
           <xref target="RFC9000"/>, <xref target="RFC9221"/>,
-          <xref target="RFC9368"/>, and <xref target="RFC9287"/>.
+          <xref target="RFC9287"/>, <xref target="RFC9312"/>, and
+          <xref target="RFC9368"/>,
         </t>
         <figure>
           <preamble>&lt;CODE BEGINS&gt; file "iana-quic-transport@2024-03-21.yang"</preamble>

@@ -4,6 +4,17 @@ module ietf-quic-common {
     "urn:ietf:params:xml:ns:yang:ietf-quic-common";
   prefix quiccmn;
 
+  import iana-quic-version {
+    prefix iana-quic-version;
+    reference "RFC AAAA: YANG Groupings for QUIC clients and QUIC servers";
+  }
+
+  import iana-quic-transports {
+    prefix iana-quic-transports;
+    reference "RFC AAAA: YANG Groupings for QUIC clients and QUIC servers";
+  }
+
+
   organization
     "IETF NETCONF (Network Configuration) Working Group";
 
@@ -48,20 +59,34 @@ module ietf-quic-common {
 
   // Groupings
 
+  grouping version {
+    description
+      "A reusable grouping for QUIC Versions.";
+    reference
+      "RFC 9000: QUIC: A UDP-Based Multiplexed and Secure Transport
+       RFC 9369: QUIC Version 2";
+
+    leaf-list version {
+      type iana-quic-version:version;
+      description
+        "The QUIC versions supported.";
+    }
+  }
+
   grouping transport-parameters {
     description
       "A reusable grouping for QUIC Transport Parameters.";
     reference
       "RFC 9000: QUIC: A UDP-Based Multiplexed and Secure Transport
-       RFC 9002: QUIC Loss Detection and Congestion Control
-       RFC 9312: Manageability of the QUIC Transport Protocol";
+       RFC 9221: An Unreliable Datagram Extension to QUIC
+       RFC 9287: Greasing the QUIC Bit
+       RFC 9312: Manageability of the QUIC Transport Protocol
+       RFC 9368: Compatible Version Negotiation for QUIC";
 
-    leaf version { type uint32; }
-    leaf initial-rtt { type uint32; }
-    leaf congestion-control-algorithm { type string; }
-    leaf max-idle-timeout { type uint32; }
-    leaf initial-max-streams-bidi { type uint32; }
-    leaf initial-max-streams-uni { type uint32; }
-    leaf keep-alive-interval { type uint32; }
+    leaf leaf-list {
+      type iana-quic-transports:transport-parameter;
+      description
+        "A leaf list containing the QUIC transport parameters.";
+    }
   }
 }
