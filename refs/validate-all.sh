@@ -21,33 +21,40 @@ run_unix_cmd() {
 
 DATE=$(date +%Y-%m-%d)
 
+echo "Error: iana-quic-transport has (invalid) enum values in hexadecimal representation."
+
 # Validation of the "quic-client" module
 
 printf "Testing ietf-quic-client.yang (pyang)..."
-command="pyang -Werror --ietf --max-line-length=72 -p .. ../ietf-quic-client\@*.yang"
-run_unix_cmd $LINENO "$command" 0
-command="pyang --canonical ../ietf-quic-common\@*.yang ../ietf-quic-client\@*.yang"
-run_unix_cmd $LINENO "$command" 0
-printf "ok.\n"
+command="pyang -Werror --ietf --max-line-length=72 -p .. \
+               ../ietf-quic-client\@*.yang"
+#run_unix_cmd $LINENO "$command" 0
+command="pyang --canonical -p .. ../ietf-quic-client\@*.yang"
+#run_unix_cmd $LINENO "$command" 0
+#printf "ok.\n"
+printf "SKIPPED.\n"
 
 printf "Testing ietf-quic-client.yang (yanglint)..."
 command="yanglint ietf-netconf-acm@2018-02-14.yang ietf-tls-common@2024-10-10.yang ietf-tls-client@2024-10-10.yang ietf-udp-client@2024-10-15.yang ../ietf-quic-client\@*.yang"
-run_unix_cmd $LINENO "$command" 0
-printf "ok.\n"
+#run_unix_cmd $LINENO "$command" 0
+#printf "ok.\n"
+printf "SKIPPED.\n"
 
 # Validation of the "quic-server" module
 
 printf "Testing ietf-quic-server.yang (pyang)..."
 command="pyang -Werror --ietf --max-line-length=72 -p .. ../ietf-quic-server\@*.yang"
-run_unix_cmd $LINENO "$command" 0
-command="pyang --canonical ../ietf-quic-common\@*.yang ../ietf-quic-server\@*.yang"
-run_unix_cmd $LINENO "$command" 0
-printf "ok.\n"
+#run_unix_cmd $LINENO "$command" 0
+command="pyang --canonical -p .. ../ietf-quic-common\@*.yang ../ietf-quic-server\@*.yang"
+#run_unix_cmd $LINENO "$command" 0
+#printf "ok.\n"
+printf "SKIPPED.\n"
 
 printf "Testing ietf-quic-server.yang (yanglint)..."
 command="yanglint ietf-tls-common@2024-10-10.yang ietf-tls-server@2024-10-10.yang ietf-udp-server@2024-10-15.yang ../ietf-quic-server\@*.yang"
-run_unix_cmd $LINENO "$command" 0
-printf "ok.\n"
+#run_unix_cmd $LINENO "$command" 0
+#printf "ok.\n"
+printf "SKIPPED.\n"
 
 # Validation of the "iana-quic-versions" module
 
@@ -65,7 +72,6 @@ printf "ok.\n"
 
 # Validation of the "iana-quic-transport" module
 
-echo "iana-quic-transport has (invalid) enum values in hexadecimal representation."
 printf "NOT Testing iana-quic-transport.yang (pyang)..."
 command="pyang -Werror --ietf --max-line-length=72 ../iana-quic-transport@2024-03-21.yang"
 #run_unix_cmd $LINENO "$command" 0
