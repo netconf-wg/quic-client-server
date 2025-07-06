@@ -4,13 +4,13 @@ module ietf-quic-common {
     "urn:ietf:params:xml:ns:yang:ietf-quic-common";
   prefix quiccmn;
 
-  import iana-quic-version {
-    prefix iana-quic-version;
+  import iana-quic-versions {
+    prefix iana-quic-versions;
     reference "RFC AAAA: YANG Groupings for QUIC clients and QUIC servers";
   }
 
-  import iana-quic-transports {
-    prefix iana-quic-transports;
+  import iana-quic-transport {
+    prefix iana-quic-transport;
     reference "RFC AAAA: YANG Groupings for QUIC clients and QUIC servers";
   }
 
@@ -67,7 +67,7 @@ module ietf-quic-common {
        RFC 9369: QUIC Version 2";
 
     leaf-list version {
-      type iana-quic-version:version;
+      type iana-quic-versions:version;
       description
         "The QUIC versions supported.";
     }
@@ -84,7 +84,7 @@ module ietf-quic-common {
        RFC 9368: Compatible Version Negotiation for QUIC";
 
     leaf leaf-list {
-      type iana-quic-transports:transport-parameter;
+      type iana-quic-transport:transport-parameter;
       description
         "A leaf list containing the QUIC transport parameters.";
     }
