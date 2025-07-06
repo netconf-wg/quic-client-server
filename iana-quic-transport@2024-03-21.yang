@@ -192,7 +192,7 @@ module iana-quic-transport {
           "https://github.com/quicwg/base-drafts/wiki
            /Quantum-Readiness-test";
       }
-      enum google handshake message {
+      enum google_handshake_message {
         value 0x26ab;
         description
           "(provisional) Used to carry Google internal handshake
