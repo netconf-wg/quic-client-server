@@ -450,8 +450,6 @@ RFC: AAAA
       <?rfc include="reference.RFC.8446.xml"?> <!-- TLS 1.3 -->
       <?rfc include="reference.RFC.9000.xml"?> <!-- QUIC -->
       <?rfc include="reference.RFC.9001.xml"?> <!-- QUIC TLS -->
-      <?rfc include="reference.RFC.9002.xml"?> <!-- QUIC loss/congestion-->
-      <?rfc include="reference.RFC.9312.xml"?> <!-- QUIC manageability -->
       <?rfc include="reference.RFC.9221.xml"?> <!-- QUIC unreliable datagram -->
       <?rfc include="reference.RFC.9287.xml"?> <!-- Greate Quic Bit -->
       <?rfc include="reference.RFC.9368.xml"?> <!-- QUIC vsn negotiation -->
