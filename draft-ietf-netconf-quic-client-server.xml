@@ -493,9 +493,9 @@ RFC: AAAA
         <t>This YANG module has normative references to
           <xref target="RFC9000"/> and <xref target="RFC9369"/>.</t>
         <figure>
-          <preamble>&lt;CODE BEGINS&gt; file "iana-quic-versions@2024-03-21.yang"</preamble>
+          <preamble>&lt;CODE BEGINS&gt; file "iana-quic-versions@2025-09-23.yang"</preamble>
           <artwork><![CDATA[
-INSERT_TEXT_FROM_FILE(iana-quic-versions@2024-03-21.yang)
+INSERT_TEXT_FROM_FILE(iana-quic-versions@2025-09-23.yang)
 ]]></artwork>
           <postamble>&lt;CODE ENDS&gt;</postamble>
         </figure>
@@ -511,9 +511,9 @@ INSERT_TEXT_FROM_FILE(iana-quic-versions@2024-03-21.yang)
           <xref target="RFC9368"/>,
         </t>
         <figure>
-          <preamble>&lt;CODE BEGINS&gt; file "iana-quic-transport@2024-03-21.yang"</preamble>
+          <preamble>&lt;CODE BEGINS&gt; file "iana-quic-transport@2025-09-23.yang"</preamble>
           <artwork><![CDATA[
-INSERT_TEXT_FROM_FILE(iana-quic-transport@2024-03-21.yang)
+INSERT_TEXT_FROM_FILE(iana-quic-transport@2025-09-23.yang)
 ]]></artwork>
           <postamble>&lt;CODE ENDS&gt;</postamble>
         </figure>
