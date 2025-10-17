@@ -468,7 +468,7 @@ RFC: AAAA
     <references title="Informative References">
       <?rfc include="reference.RFC.6020.xml"?> <!-- YANG (orig) -->
       <?rfc include="reference.RFC.8340.xml"?> <!-- tree diagrams-->
-      <?rfc include="reference.RFC.9002.xml"?> <!-- QUIC loss/congestion-->
+      <!--<?rfc include="reference.RFC.9002.xml"?>--> <!-- QUIC loss/congestion-->
       <reference anchor="IANA-QUIC-VERSIONS" target="https://www.iana.org/assignments/quic/quic.xhtml#quic-versions">
         <front>
           <title>QUIC Versions</title>
