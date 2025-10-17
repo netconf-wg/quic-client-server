@@ -12,7 +12,6 @@ module iana-quic-transport {
      ICANN
      12025 Waterfront Drive, Suite 300
      Los Angeles, CA 90094
-     
 
      Tel: +1 424 254 5300
 
@@ -22,7 +21,7 @@ module iana-quic-transport {
     "This YANG module translates IANA registry 'QUIC Transport
      Parameters' to YANG derived types.
 
-     Copyright (c) 2024 IETF Trust and the persons identified as
+     Copyright (c) 2025 IETF Trust and the persons identified as
      authors of the code. All rights reserved.
 
      Redistribution and use in source and binary forms, with or
@@ -39,7 +38,7 @@ module iana-quic-transport {
   reference
     "QUIC (https://www.iana.org/assignments/quic/)";
 
-  revision 2024-03-21 {
+  revision 2025-09-23 {
     description
       "Current revision as of the revision date specified in the XML
        representation of the registry page.";
@@ -52,215 +51,195 @@ module iana-quic-transport {
   typedef quic-transport-parameter {
     type enumeration {
       enum original_destination_connection_id {
-        value 0x00;
         description
-          "(permanent)";
+          "0x00 (permanent)";
         reference
           "RFC 9000";
       }
       enum max_idle_timeout {
-        value 0x01;
         description
-          "(permanent)";
+          "0x01 (permanent)";
         reference
           "RFC 9000";
       }
       enum stateless_reset_token {
-        value 0x02;
         description
-          "(permanent)";
+          "0x02 (permanent)";
         reference
           "RFC 9000";
       }
       enum max_udp_payload_size {
-        value 0x03;
         description
-          "(permanent)";
+          "0x03 (permanent)";
         reference
           "RFC 9000";
       }
       enum initial_max_data {
-        value 0x04;
         description
-          "(permanent)";
+          "0x04 (permanent)";
         reference
           "RFC 9000";
       }
       enum initial_max_stream_data_bidi_local {
-        value 0x05;
         description
-          "(permanent)";
+          "0x05 (permanent)";
         reference
           "RFC 9000";
       }
       enum initial_max_stream_data_bidi_remote {
-        value 0x06;
         description
-          "(permanent)";
+          "0x06 (permanent)";
         reference
           "RFC 9000";
       }
       enum initial_max_stream_data_uni {
-        value 0x07;
         description
-          "(permanent)";
+          "0x07 (permanent)";
         reference
           "RFC 9000";
       }
       enum initial_max_streams_bidi {
-        value 0x08;
         description
-          "(permanent)";
+          "0x08 (permanent)";
         reference
           "RFC 9000";
       }
       enum initial_max_streams_uni {
-        value 0x09;
         description
-          "(permanent)";
+          "0x09 (permanent)";
         reference
           "RFC 9000";
       }
       enum ack_delay_exponent {
-        value 0x0a;
         description
-          "(permanent)";
+          "0x0a (permanent)";
         reference
           "RFC 9000";
       }
       enum max_ack_delay {
-        value 0x0b;
         description
-          "(permanent)";
+          "0x0b (permanent)";
         reference
           "RFC 9000";
       }
       enum disable_active_migration {
-        value 0x0c;
         description
-          "(permanent)";
+          "0x0c (permanent)";
         reference
           "RFC 9000";
       }
       enum preferred_address {
-        value 0x0d;
         description
-          "(permanent)";
+          "0x0d (permanent)";
         reference
           "RFC 9000";
       }
       enum active_connection_id_limit {
-        value 0x0e;
         description
-          "(permanent)";
+          "0x0e (permanent)";
         reference
           "RFC 9000";
       }
       enum initial_source_connection_id {
-        value 0x0f;
         description
-          "(permanent)";
+          "0x0f (permanent)";
         reference
           "RFC 9000";
       }
       enum retry_source_connection_id {
-        value 0x10;
         description
-          "(permanent)";
+          "0x10 (permanent)";
         reference
           "RFC 9000";
       }
       enum version_information {
-        value 0x11;
         description
-          "(permanent)";
+          "0x11 (permanent)";
         reference
           "RFC 9368";
       }
       enum max_datagram_frame_size {
-        value 0x20;
         description
-          "(permanent)";
+          "0x20 (permanent)";
         reference
           "RFC 9221";
       }
       enum discard {
-        value 0x173e;
         description
-          "(provisional) Receiver silently discards.";
+          "0x173e (provisional) Receiver silently discards.";
         reference
           "https://github.com/quicwg/base-drafts/wiki
            /Quantum-Readiness-test";
       }
       enum google_handshake_message {
-        value 0x26ab;
         description
-          "(provisional) Used to carry Google internal handshake
-           message";
+          "0x26ab (provisional) Used to carry Google internal
+           handshake message";
       }
       enum grease_quic_bit {
-        value 0x2ab2;
         description
-          "(permanent)";
+          "0x2ab2 (permanent)";
         reference
           "RFC 9287";
       }
       enum initial_rtt {
-        value 0x3127;
         description
-          "(provisional) Initial RTT in microseconds";
+          "0x3127 (provisional) Initial RTT in microseconds";
       }
       enum google_connection_options {
-        value 0x3128;
         description
-          "(provisional) Google connection options for
+          "0x3128 (provisional) Google connection options for
            experimentation";
       }
       enum user_agent {
-        value 0x3129;
         status deprecated;
         description
-          "(provisional) User agent string (deprecated)";
+          "0x3129 (provisional) User agent string (deprecated)";
       }
       enum google_version {
-        value 0x4752;
         description
-          "(provisional) Google QUIC version downgrade prevention";
+          "0x4752 (provisional) Google QUIC version downgrade
+           prevention";
       }
       enum version_information_draft {
-        value 0xff73db;
         status deprecated;
         description
-          "(provisional) Deprecated; use version_information
+          "0xff73db (provisional) Deprecated; use version_information
            instead";
         reference
           "draft-ietf-quic-version-negotiation-13";
       }
-      enum min_ack_delay {
-        value 0xff04de1b;
+      enum google_debug_1 {
         description
-          "(provisional)";
+          "0x219bbcd0 (provisional)";
+      }
+      enum min_ack_delay {
+        description
+          "0xff04de1b (provisional)";
         reference
           "draft-ietf-quic-ack-frequency-07";
       }
       enum enable_multipath {
-        value 0x0f739bbc1b666d05;
         description
-          "(provisional)";
+          "0x0f739bbc1b666d05 (provisional)";
         reference
           "draft-ietf-quic-multipath-05";
       }
       enum enable_multipath-06 {
-        value 0x0f739bbc1b666d06;
         description
-          "(provisional)";
+          "0x0f739bbc1b666d06 (provisional)";
         reference
           "draft-ietf-quic-multipath-06";
       }
-      enum bdp_frame {
-        value 0x4143414213370002;
+      enum initial_max_path_id {
         description
-          "(provisional)";
+          "0x0f739bbc1b666d0d (provisional)";
+        reference
+          "draft-ietf-quic-multipath-15";
+      }
+      enum bdp_frame {
+        description
+          "0x4143414213370002 (provisional)";
         reference
           "draft-misell-quic-bdp-token-02";
       }
