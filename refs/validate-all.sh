@@ -28,60 +28,60 @@ echo "Error: iana-quic-transport has (invalid) enum values in hexadecimal repres
 printf "Testing ietf-quic-client.yang (pyang)..."
 command="pyang -Werror --ietf --max-line-length=72 -p .. \
                ../ietf-quic-client\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-command="pyang --canonical -p .. ../ietf-quic-client\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-#printf "ok.\n"
-printf "SKIPPED.\n"
+run_unix_cmd $LINENO "$command" 0
+command="pyang --canonical ../iana*\@*.yang ../ietf-quic-common\@*.yang ../ietf-quic-client\@*.yang"
+run_unix_cmd $LINENO "$command" 0
+printf "ok.\n"
+#printf "SKIPPED.\n"
 
 printf "Testing ietf-quic-client.yang (yanglint)..."
 command="yanglint ietf-netconf-acm@2018-02-14.yang ietf-tls-common@2024-10-10.yang ietf-tls-client@2024-10-10.yang ietf-udp-client@2024-10-15.yang ../ietf-quic-client\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-#printf "ok.\n"
-printf "SKIPPED.\n"
+run_unix_cmd $LINENO "$command" 0
+printf "ok.\n"
+#printf "SKIPPED.\n"
 
 # Validation of the "quic-server" module
 
 printf "Testing ietf-quic-server.yang (pyang)..."
 command="pyang -Werror --ietf --max-line-length=72 -p .. ../ietf-quic-server\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-command="pyang --canonical -p .. ../ietf-quic-common\@*.yang ../ietf-quic-server\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-#printf "ok.\n"
-printf "SKIPPED.\n"
+run_unix_cmd $LINENO "$command" 0
+command="pyang --canonical ../iana*\@*.yang ../ietf-quic-common\@*.yang ../ietf-quic-server\@*.yang"
+run_unix_cmd $LINENO "$command" 0
+printf "ok.\n"
+#printf "SKIPPED.\n"
 
 printf "Testing ietf-quic-server.yang (yanglint)..."
 command="yanglint ietf-tls-common@2024-10-10.yang ietf-tls-server@2024-10-10.yang ietf-udp-server@2024-10-15.yang ../ietf-quic-server\@*.yang"
-#run_unix_cmd $LINENO "$command" 0
-#printf "ok.\n"
-printf "SKIPPED.\n"
+run_unix_cmd $LINENO "$command" 0
+printf "ok.\n"
+#printf "SKIPPED.\n"
 
 # Validation of the "iana-quic-versions" module
 
 printf "Testing iana-quic-versions.yang (pyang)..."
-command="pyang -Werror --ietf --max-line-length=72 ../iana-quic-versions@2024-03-21.yang"
+command="pyang -Werror --ietf --max-line-length=72 ../iana-quic-versions@2025-09-23.yang"
 run_unix_cmd $LINENO "$command" 0
-command="pyang --canonical ../iana-quic-versions@2024-03-21.yang"
+command="pyang --canonical ../iana-quic-versions@2025-09-23.yang"
 run_unix_cmd $LINENO "$command" 0
 printf "ok.\n"
 
 printf "Testing iana-quic-versions.yang (yanglint)..."
-command="yanglint ../iana-quic-versions@2024-03-21.yang"
+command="yanglint ../iana-quic-versions@2025-09-23.yang"
 run_unix_cmd $LINENO "$command" 0
 printf "ok.\n"
 
 # Validation of the "iana-quic-transport" module
 
-printf "NOT Testing iana-quic-transport.yang (pyang)..."
-command="pyang -Werror --ietf --max-line-length=72 ../iana-quic-transport@2024-03-21.yang"
-#run_unix_cmd $LINENO "$command" 0
-command="pyang --canonical ../iana-quic-transport@2024-03-21.yang"
-#run_unix_cmd $LINENO "$command" 0
-#printf "ok.\n"
-printf "SKIPPED.\n"
+printf "esting iana-quic-transport.yang (pyang)..."
+command="pyang -Werror --ietf --max-line-length=72 ../iana-quic-transport@2025-09-23.yang"
+run_unix_cmd $LINENO "$command" 0
+command="pyang --canonical ../iana-quic-transport@2025-09-23.yang"
+run_unix_cmd $LINENO "$command" 0
+printf "ok.\n"
+#printf "SKIPPED.\n"
 
-printf "NOT Testing iana-quic-transport.yang (yanglint)..."
-command="yanglint ../iana-quic-transport@2024-03-21.yang"
-#run_unix_cmd $LINENO "$command" 0
-#printf "ok.\n"
-printf "SKIPPED.\n"
+printf "Testing iana-quic-transport.yang (yanglint)..."
+command="yanglint ../iana-quic-transport@2025-09-23.yang"
+run_unix_cmd $LINENO "$command" 0
+printf "ok.\n"
+#printf "SKIPPED.\n"
