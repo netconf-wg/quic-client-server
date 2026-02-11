@@ -399,7 +399,7 @@ RFC: AAAA
             <xref target="IANA-QUIC-VERSIONS"/>.
           </t>
           <t>
-            Ths registry defines a YANG enumeration for each QUIC versions.
+            Ths registry defines a YANG enumeration for each QUIC version.
           </t>
           <t>
             An initial version of this module can be found in
