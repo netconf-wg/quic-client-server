@@ -429,6 +429,24 @@ RFC: AAAA
             An initial version of this module can be found in
             <xref target="iana-quic-transport-module"/>.
           </t>
+          <t>
+            Since the QUIC Transport Parameters registry may have provisionally
+            registered names change value when they are made permanent, make
+            the following considerations.
+            <ul>
+              <li>
+                If an existing name exists in the module, update the value in
+                the description field.
+              </li>
+              <li>
+                Since normative changes to enum descriptions are
+                non-backwards-compatible, the YANG Semver version need to update
+                the MAJOR version number. Note that this follows normal YANG
+                Semver versioning rules.
+                <xref target="I-D.ietf-netmod-yang-semver"/>.
+              </li>
+            </ul>
+          </t>
           <ul>
             <li>
               Note that this module was created on July 6th, 2025, and that
@@ -464,6 +482,7 @@ RFC: AAAA
       <?rfc include="reference.RFC.9369.xml"?> <!-- QUIC Version 2 -->
       <?rfc include="reference.RFC.9645.xml"?> <!-- tls-client-server -->
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netconf-udp-client-server.xml"/>
+      <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netmod-yang-semver.xml"/>
     </references>
     <references title="Informative References">
       <?rfc include="reference.RFC.6020.xml"?> <!-- YANG (orig) -->
