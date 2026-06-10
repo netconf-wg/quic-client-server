@@ -68,10 +68,6 @@ module ietf-quic-server {
       "RFC AAAA: YANG Groupings for QUIC Clients and QUIC Servers";
   }
 
-  // Features
-
-  // FIXME feature quic-call-home
-
   // Groupings
 
   grouping quic-server {
