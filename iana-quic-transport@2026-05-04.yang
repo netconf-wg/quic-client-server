@@ -21,7 +21,7 @@ module iana-quic-transport {
     "This YANG module translates IANA registry 'QUIC Transport
      Parameters' to YANG derived types.
 
-     Copyright (c) 2025 IETF Trust and the persons identified as
+     Copyright (c) 2026 IETF Trust and the persons identified as
      authors of the code. All rights reserved.
 
      Redistribution and use in source and binary forms, with or
@@ -38,7 +38,7 @@ module iana-quic-transport {
   reference
     "QUIC (https://www.iana.org/assignments/quic/)";
 
-  revision 2025-09-23 {
+  revision 2026-05-04 {
     description
       "Current revision as of the revision date specified in the XML
        representation of the registry page.";
@@ -164,12 +164,24 @@ module iana-quic-transport {
         reference
           "RFC 9221";
       }
+      enum initial_max_path_id {
+        description
+          "0x3e (permanent)";
+        reference
+          "RFC-ietf-quic-multipath-21";
+      }
       enum discard {
         description
           "0x173e (provisional) Receiver silently discards.";
         reference
           "https://github.com/quicwg/base-drafts/wiki
            /Quantum-Readiness-test";
+      }
+      enum scone_supported {
+        description
+          "0x219e (provisional)";
+        reference
+          "draft-ietf-scone-protocol-04";
       }
       enum google_handshake_message {
         description
@@ -197,9 +209,10 @@ module iana-quic-transport {
           "0x3129 (provisional) User agent string (deprecated)";
       }
       enum google_version {
+        status deprecated;
         description
-          "0x4752 (provisional) Google QUIC version downgrade
-           prevention";
+          "0x4752 (provisional) Deprecated; use version_information
+           instead";
       }
       enum version_information_draft {
         status deprecated;
@@ -218,24 +231,6 @@ module iana-quic-transport {
           "0xff04de1b (provisional)";
         reference
           "draft-ietf-quic-ack-frequency-07";
-      }
-      enum enable_multipath {
-        description
-          "0x0f739bbc1b666d05 (provisional)";
-        reference
-          "draft-ietf-quic-multipath-05";
-      }
-      enum enable_multipath-06 {
-        description
-          "0x0f739bbc1b666d06 (provisional)";
-        reference
-          "draft-ietf-quic-multipath-06";
-      }
-      enum initial_max_path_id {
-        description
-          "0x0f739bbc1b666d0d (provisional)";
-        reference
-          "draft-ietf-quic-multipath-15";
       }
       enum bdp_frame {
         description

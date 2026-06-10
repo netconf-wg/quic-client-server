@@ -20,8 +20,8 @@ run_unix_cmd() {
 }
 
 DATE=$(date +%Y-%m-%d)
-
-echo "Error: iana-quic-transport has (invalid) enum values in hexadecimal representation."
+QUIC_TRANSPORT=../iana-quic-transport@2026-05-04.yang
+QUIC_VERSIONS=../iana-quic-versions@2026-05-04.yang
 
 # Validation of the "quic-client" module
 
@@ -59,29 +59,29 @@ printf "ok.\n"
 # Validation of the "iana-quic-versions" module
 
 printf "Testing iana-quic-versions.yang (pyang)..."
-command="pyang -Werror --ietf --max-line-length=72 ../iana-quic-versions@2025-09-23.yang"
+command="pyang -Werror --ietf --max-line-length=72 $QUIC_VERSIONS"
 run_unix_cmd $LINENO "$command" 0
-command="pyang --canonical ../iana-quic-versions@2025-09-23.yang"
+command="pyang --canonical $QUIC_VERSIONS"
 run_unix_cmd $LINENO "$command" 0
 printf "ok.\n"
 
 printf "Testing iana-quic-versions.yang (yanglint)..."
-command="yanglint ../iana-quic-versions@2025-09-23.yang"
+command="yanglint $QUIC_VERSIONS"
 run_unix_cmd $LINENO "$command" 0
 printf "ok.\n"
 
 # Validation of the "iana-quic-transport" module
 
 printf "esting iana-quic-transport.yang (pyang)..."
-command="pyang -Werror --ietf --max-line-length=72 ../iana-quic-transport@2025-09-23.yang"
+command="pyang -Werror --ietf --max-line-length=72 $QUIC_TRANSPORT"
 run_unix_cmd $LINENO "$command" 0
-command="pyang --canonical ../iana-quic-transport@2025-09-23.yang"
+command="pyang --canonical $QUIC_TRANSPORT"
 run_unix_cmd $LINENO "$command" 0
 printf "ok.\n"
 #printf "SKIPPED.\n"
 
 printf "Testing iana-quic-transport.yang (yanglint)..."
-command="yanglint ../iana-quic-transport@2025-09-23.yang"
+command="yanglint $QUIC_TRANSPORT"
 run_unix_cmd $LINENO "$command" 0
 printf "ok.\n"
 #printf "SKIPPED.\n"
