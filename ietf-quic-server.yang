@@ -84,6 +84,7 @@ module ietf-quic-server {
         "RFC 9001: Using TLS to Secure QUIC";
     }
     uses udps:udp-server;
+    uses quiccmn:version;
     uses quiccmn:transport-parameters;
   }
 }
