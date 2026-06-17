@@ -25,7 +25,7 @@ module ietf-quic-client {
   import ietf-udp-client {
     prefix udpc;
     reference
-      "RFC CCCC: YANG Groupings for UDP Clients and UDP Servers";
+      "RFC 9948: YANG Groupings for UDP Clients and UDP Servers";
   }
 
   organization

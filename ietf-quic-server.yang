@@ -25,7 +25,7 @@ module ietf-quic-server {
   import ietf-udp-server {
     prefix udps;
     reference
-      "RFC CCCC: YANG Groupings for UDP Clients and UDP Servers";
+      "RFC 9948: YANG Groupings for UDP Clients and UDP Servers";
   }
 
   organization
