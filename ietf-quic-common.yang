@@ -83,7 +83,7 @@ module ietf-quic-common {
        RFC 9312: Manageability of the QUIC Transport Protocol
        RFC 9368: Compatible Version Negotiation for QUIC";
 
-    leaf leaf-list {
+    leaf-list transport-parameter {
       type iana-quic-transport:transport-parameter;
       description
         "A leaf list containing the QUIC transport parameters.";
