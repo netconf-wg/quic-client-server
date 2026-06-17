@@ -38,7 +38,7 @@ idnits: $(next).txt
 clean:
 	-rm -f $(draft).txt $(draft).html index.html
 	-rm -f $(next).txt $(next).html
-	-rm -f $(draft)-[0-9][0-9].xml
+	-rm -f $(draft)-[0-9][0-9].*
 	-rm -f ietf-quic-*@202?-??-??.yang
 	-rm -f $(draft)-[0-9][0-9].v2v3.xml
 	-rm -f refs/tree-*.txt
