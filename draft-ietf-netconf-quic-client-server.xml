@@ -282,6 +282,19 @@ INSERT_TEXT_FROM_FILE(ietf-quic-server@YYYY-MM-DD.yang)
       </section>
     </section>
 
+    <section anchor="operational" title="Operational Considerations">
+        <t>This section is modeled after
+          <xref section="3" target="I-D.ietf-opsawg-rfc5706bis"/>.</t>
+
+        <t>When using the groupings defined in this document, it is possible to
+          refine the leaves and add default values. Such default values will be
+          used as default settings when establishing connections.</t>
+
+        <t>Updating settings for QUIC connections is implementation specific
+          behavior and dependent. Changing settings could be done for existing
+          connections if such support is available in the QUIC library used.</t>
+    </section>
+
     <section anchor="security" title="Security Considerations">
       <t>This section is modeled after the template described in
         <xref section="3.7.1" target="RFC9907"/>.</t>
@@ -481,6 +494,7 @@ RFC: AAAA
       <?rfc include="reference.RFC.9984.xml"?> <!-- udp-client-server -->
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netmod-yang-module-filename.xml"/>
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netmod-yang-semver.xml"/>
+      <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-opsawg-rfc5706bis.xml"/>
     </references>
     <references title="Informative References">
       <?rfc include="reference.RFC.6020.xml"?> <!-- YANG (orig) -->
