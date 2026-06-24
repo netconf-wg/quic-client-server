@@ -28,6 +28,12 @@ module ietf-quic-server {
       "RFC 9984: YANG Groupings for UDP Clients and UDP Servers";
   }
 
+  import ietf-yang-semver {
+    prefix ysv;
+    reference
+      "draft-ietf-netmod-yang-semver: YANG Semantic Versioning";
+  }
+
   organization
     "IETF NETCONF (Network Configuration) Working Group";
 
@@ -62,6 +68,7 @@ module ietf-quic-server {
      capitals, as shown here.";
 
   revision YYYY-MM-DD {
+    ysv:version 1.0.0-draft-quic-client-server-latest;
     description
       "Initial version";
     reference

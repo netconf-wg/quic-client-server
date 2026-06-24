@@ -95,8 +95,9 @@
       <t>
         This YANG module has normative references to <xref target="RFC9000"/>,
         <xref target="RFC9221"/>, <xref target="RFC9287"/>,
-        <xref target="RFC9312"/>, <xref target="RFC9368"/>, and
-        <xref target="RFC9369"/>.
+        <xref target="RFC9312"/>, <xref target="RFC9368"/>,
+        <xref target="RFC9369"/>, and
+        <xref target="I-D.ietf-netmod-yang-semver"/>.
       </t>
 
       <section anchor="common-overview" title="Data model overview">
@@ -134,7 +135,7 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-common-grouping.txt)
 
       <section anchor="common-yang-module" title="YANG Module">
         <figure>
-          <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-common@YYYY-MM-DD.yang"</preamble>
+          <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-common@1.0.0-draft-ietf-netconf-quic-client-server-latest.yang"</preamble>
           <artwork><![CDATA[
 INSERT_TEXT_FROM_FILE(ietf-quic-common@YYYY-MM-DD.yang)
 ]]></artwork>
@@ -200,9 +201,10 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-client-grouping.txt)
 
       <section anchor="client-yang-module" title="YANG Module">
         <t>This YANG module has normative references to
-          <xref target="RFC9645"/> and <xref target="RFC9984"/>.</t>
+          <xref target="RFC9645"/> and <xref target="RFC9984"/>, and
+          <xref target="I-D.ietf-netmod-yang-semver"/>.</t>
         <figure>
-          <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-client@YYYY-MM-DD.yang"</preamble>
+          <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-client@1.0.0-draft-ietf-netconf-quic-client-server-latest.yang"</preamble>
           <artwork><![CDATA[
 INSERT_TEXT_FROM_FILE(ietf-quic-client@YYYY-MM-DD.yang)
 ]]></artwork>
@@ -268,9 +270,10 @@ INSERT_TEXT_FROM_FILE(refs/tree-ietf-quic-server-grouping.txt)
 
       <section anchor="server-yang-module" title="YANG Module">
         <t>This YANG module has normative references to
-          <xref target="RFC9645"/> and <xref target="RFC9984"/>.</t>
+          <xref target="RFC9645"/>, <xref target="RFC9984"/>, and
+          <xref target="I-D.ietf-netmod-yang-semver"/>.</t>
         <figure>
-          <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-server@YYYY-MM-DD.yang"</preamble>
+          <preamble>&lt;CODE BEGINS&gt; file "ietf-quic-server@1.0.0-draft-ietf-netconf-quic-client-server-latest.yang"</preamble>
           <artwork><![CDATA[
 INSERT_TEXT_FROM_FILE(ietf-quic-server@YYYY-MM-DD.yang)
 ]]></artwork>
@@ -476,6 +479,7 @@ RFC: AAAA
       <?rfc include="reference.RFC.9645.xml"?> <!-- tls-client-server -->
       <?rfc include="reference.RFC.9907.xml"?> <!-- YANG guidelines -->
       <?rfc include="reference.RFC.9984.xml"?> <!-- udp-client-server -->
+      <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netmod-yang-module-filename.xml"/>
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netmod-yang-semver.xml"/>
     </references>
     <references title="Informative References">

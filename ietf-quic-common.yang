@@ -6,12 +6,20 @@ module ietf-quic-common {
 
   import iana-quic-versions {
     prefix iana-quic-versions;
-    reference "RFC AAAA: YANG Groupings for QUIC clients and QUIC servers";
+    reference
+      "RFC AAAA: YANG Groupings for QUIC clients and QUIC servers";
   }
 
   import iana-quic-transport {
     prefix iana-quic-transport;
-    reference "RFC AAAA: YANG Groupings for QUIC clients and QUIC servers";
+    reference
+      "RFC AAAA: YANG Groupings for QUIC clients and QUIC servers";
+  }
+
+  import ietf-yang-semver {
+    prefix ysv;
+    reference
+      "draft-ietf-netmod-yang-semver: YANG Semantic Versioning";
   }
 
 
@@ -51,6 +59,7 @@ module ietf-quic-common {
      capitals, as shown here.";
 
   revision YYYY-MM-DD {
+    ysv:version 1.0.0-draft-quic-client-server-latest;
     description
       "Initial version";
     reference
