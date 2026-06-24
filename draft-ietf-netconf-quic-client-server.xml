@@ -280,30 +280,32 @@ INSERT_TEXT_FROM_FILE(ietf-quic-server@YYYY-MM-DD.yang)
     </section>
 
     <section anchor="security" title="Security Considerations">
-      <t>This section follows the template defined in Section 3.7.1 of
-        <xref target="RFC8407"/>.</t>
-      <t>The YANG modules specified in this document defines a schema for data
-        that is designed to be accessed via network management protocols such
-        as NETCONF <xref target="RFC6241"/> or RESTCONF
-        <xref target="RFC8040"/>. The lowest NETCONF layer is the secure
-        transport layer, and the mandatory-to-implement secure transport is
-        Secure Shell (SSH) <xref target="RFC6242"/>. The lowest RESTCONF layer
-        is HTTPS, and the mandatory-to-implement secure transport is TLS
-        <xref target="RFC8446"/>.</t>
+      <t>This section is modeled after the template described in
+        <xref section="3.7.1" target="RFC9907"/>.</t>
+      <t>The "ietf-quic-common", "ietf-quic-client", and "ietf-quic-server"
+        YANG modules defines a data model that is designed to be accessed via
+        YANG-based management protocols, such as the Network
+        Configuration Protocol (NETCONF) <xref target="RFC6241"/> and RESTCONF
+        <xref target="RFC8040"/>.  These YANG-based management protocols (1)
+        have to use a secure transport layer (e.g., Secure Shell (SSH)
+        <xref target="RFC4252"/>, TLS <xref target="RFC8446"/>, and QUIC
+        <xref target="RFC9000"/>) and (2) have to use mutual authentication.</t>
       <t>The Network Configuration Access Control Model (NACM)
         <xref target="RFC8341"/> provides the means to restrict access for
         particular NETCONF or RESTCONF users to a preconfigured subset of all
         available NETCONF or RESTCONF protocol operations and content.</t>
-      <t>The modules presented in this draft does not contain any protocol
-        accessible nodes, and thus the security considerations for such are
-        not provided here.</t>
-      <t>Furthermore, the modules defines groupings, these considerations are
-        primarily for the designers of other modules that use these groupings.</t>
-      <t>Security considerations for the groupings used in the modules are
-        discussed in <xref target="RFC9645"/> and <xref target="RFC9948"/>,
+      <t>The YANG module defines a set of identities, types, and groupings.
+        These nodes are intended to be reused by other YANG modules. The module
+        by itself does not expose any data nodes that are writable, data nodes
+        that contain read-only state, or RPCs. As such, there are no additional
+        security issues related to the YANG module that need to be
+        considered.</t>
+      <t>Modules that use the groupings that are defined in this document should
+        identify the corresponding security considerations. For example, reusing
+        some of these groupings will expose privacy-related information.
+        Security considerations for the groupings used in the modules are
+        discussed in <xref target="RFC9645"/> and <xref target="RFC9984"/>,
         refer to these documents for further details.</t>
-      <t>Since the modules does not define any RPCs or actions or notifications,
-        and thus the security considerations for such are not provided here.</t>
     </section>
 
     <section title="IANA Considerations">
@@ -457,13 +459,12 @@ RFC: AAAA
     <references title="Normative References">
       <?rfc include="reference.RFC.2119.xml"?> <!-- MUSTs, etc. -->
       <?rfc include="reference.RFC.3688.xml"?> <!-- IETF XML Registry -->
+      <?rfc include="reference.RFC.4252.xml"?> <!-- SSH -->
       <?rfc include="reference.RFC.6241.xml"?> <!-- NETCONF -->
-      <?rfc include="reference.RFC.6242.xml"?> <!-- NETCONF over SSH -->
       <?rfc include="reference.RFC.7950.xml"?> <!-- YANG (curr) -->
       <?rfc include="reference.RFC.8040.xml"?> <!-- RESTCONF -->
       <?rfc include="reference.RFC.8174.xml"?> <!-- rfc2119 update -->
       <?rfc include="reference.RFC.8341.xml"?> <!-- NACM -->
-      <?rfc include="reference.RFC.8407.xml"?> <!-- YANG guidelines -->
       <?rfc include="reference.RFC.8446.xml"?> <!-- TLS 1.3 -->
       <?rfc include="reference.RFC.9000.xml"?> <!-- QUIC -->
       <?rfc include="reference.RFC.9001.xml"?> <!-- QUIC TLS -->
@@ -473,6 +474,7 @@ RFC: AAAA
       <?rfc include="reference.RFC.9368.xml"?> <!-- QUIC vsn negotiation -->
       <?rfc include="reference.RFC.9369.xml"?> <!-- QUIC Version 2 -->
       <?rfc include="reference.RFC.9645.xml"?> <!-- tls-client-server -->
+      <?rfc include="reference.RFC.9907.xml"?> <!-- YANG guidelines -->
       <?rfc include="reference.RFC.9984.xml"?> <!-- udp-client-server -->
       <xi:include href="https://datatracker.ietf.org/doc/bibxml3/reference.I-D.ietf-netmod-yang-semver.xml"/>
     </references>
