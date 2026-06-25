@@ -550,5 +550,11 @@ INSERT_TEXT_FROM_FILE(iana-quic-transport@2026-05-04.yang)
         </figure>
       </section>
     </section>
+    <section title="Acknowledgements" numbered="no">
+      <t>
+        The author would like to thank Marc Blanchet for his excellent technical
+        review, support, and guidance.
+      </t>
+    </section>
   </back>
 </rfc>
