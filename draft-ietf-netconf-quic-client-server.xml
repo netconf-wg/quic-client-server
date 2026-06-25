@@ -293,6 +293,16 @@ INSERT_TEXT_FROM_FILE(ietf-quic-server@YYYY-MM-DD.yang)
         <t>Updating settings for QUIC connections is implementation specific
           behavior and dependent. Changing settings could be done for existing
           connections if such support is available in the QUIC library used.</t>
+
+        <t>
+          Updating settings in real time for established QUIC connections may
+          have major impact on the connection, including early termination.
+          Moreover, the client configuring the settings may not know the various
+          internal states of the connection, which may further bring unexpected
+          consequences. Just as one example, changing the max_idle_timeout to a
+          too low value would possibly close the connection. Implementations
+          should be carefully support changing established connections
+          parameters, as well as users changing those parameters.</t>
     </section>
 
     <section anchor="security" title="Security Considerations">
